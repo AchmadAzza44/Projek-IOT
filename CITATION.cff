@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "Jika menggunakan atau mengutip proyek ini, silakan sitasi repository berikut."
+type: software
+title: "Projek-IOT"
+authors:
+  - family-names: "Pratama"
+    given-names: "Reffki Andrea"
+repository-code: "https://github.com/ReffkiAndreaPratama/Projek-IOT"
+license: MIT
