@@ -1,0 +1,30 @@
+# PlatformIO
+.pio/
+.platformio/
+
+# Build outputs
+build/
+dist/
+*.elf
+*.bin
+*.hex
+*.map
+
+# Temporary and backup files
+*.tmp
+*.bak
+*.swp
+*~
+
+# IDE and editor files
+.vscode/*
+!.vscode/extensions.json
+.idea/
+
+# Operating system files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Logs
+*.log
