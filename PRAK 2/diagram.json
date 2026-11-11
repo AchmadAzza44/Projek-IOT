@@ -1,0 +1,69 @@
+{
+  "version": 1,
+  "author": "Praktikum Lab 1",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": 0, "left": 0, "attrs": {} },
+    { "type": "wokwi-dht22", "id": "dht1", "top": -124.5, "left": -139.8, "attrs": {} },
+    {
+      "type": "wokwi-potentiometer",
+      "id": "pot1",
+      "top": 58.6,
+      "left": -222.1,
+      "rotate": 270,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn1",
+      "top": 159.8,
+      "left": -105.6,
+      "attrs": { "color": "green", "xray": "1" }
+    },
+    { "type": "wokwi-relay-module", "id": "relay1", "top": -28.6, "left": 153.6, "attrs": {} },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 157.55,
+      "left": 182.4,
+      "attrs": { "value": "220" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": 44.4,
+      "left": 157.4,
+      "attrs": { "color": "blue" }
+    },
+    { "type": "wokwi-led", "id": "led2", "top": 44.4, "left": 205.4, "attrs": { "color": "red" } },
+    {
+      "type": "wokwi-resistor",
+      "id": "r2",
+      "top": 119.15,
+      "left": 230.4,
+      "attrs": { "value": "1000" }
+    }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "dht1:VCC", "esp:3V3", "red", [] ],
+    [ "dht1:GND", "esp:GND.1", "black", [] ],
+    [ "dht1:SDA", "esp:4", "green", [] ],
+    [ "pot1:VCC", "esp:3V3", "red", [] ],
+    [ "pot1:GND", "esp:GND.1", "black", [] ],
+    [ "pot1:SIG", "esp:34", "green", [] ],
+    [ "btn1:1.r", "esp:15", "green", [] ],
+    [ "btn1:2.r", "esp:GND.1", "black", [] ],
+    [ "relay1:GND", "esp:GND.2", "black", [] ],
+    [ "relay1:VCC", "esp:VIN", "red", [] ],
+    [ "esp:26", "relay1:IN", "green", [] ],
+    [ "led1:A", "r1:1", "green", [ "v76.8" ] ],
+    [ "r1:2", "esp:18", "green", [ "v19.2", "h-82.84" ] ],
+    [ "led1:C", "esp:GND.3", "black", [] ],
+    [ "led2:A", "r2:1", "green", [ "v0" ] ],
+    [ "led2:C", "esp:GND.3", "green", [ "v0" ] ],
+    [ "r2:2", "esp:19", "green", [ "v19.2", "h-150.04" ] ]
+  ],
+  "dependencies": {}
+}
