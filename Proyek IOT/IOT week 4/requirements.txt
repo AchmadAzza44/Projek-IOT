@@ -1,0 +1,10 @@
+
+---
+
+## 📁 FOLDER 2 — `iot-week4-gateway/`
+
+### `requirements.txt`
+
+```txt
+cbor2>=5.6.0
+pyserial>=3.5
