@@ -1,0 +1,9 @@
+PROJECT: UNIB IoT Lab-2 Praktikum Minggu 3
+RELEASE: 1.1.0
+BOARD: DOIT ESP32 DevKit V1 (classic ESP32)
+I2C: SDA GPIO21 / SCL GPIO22; Wokwi BMP180 0x77; physical BMP280 0x76 or 0x77; OLED 0x3C
+WAKEUP: EXT0 GPIO15 active LOW; physical RTC Timer 10 seconds; Wokwi real-sleep probe 100 ms
+STATUS LED: GPIO2 through 220-ohm series resistor
+FREERTOS: TaskSensor Core 1; TaskVisualJSON Core 0
+RTC_DATA_ATTR: boot count, last readings, temperature min/max
+VERSION: 1.1.0
